@@ -1,0 +1,25 @@
+.u-wrapper {
+  width: 46rem;
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+.Content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background-color: var(--white);
+  border-radius: 1.875rem;
+
+  overflow: hidden;
+}
+
+.Main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  height: 100dvh;
+
+  background-color: var(--background);
+}

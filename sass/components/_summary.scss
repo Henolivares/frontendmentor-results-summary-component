@@ -1,0 +1,23 @@
+.Summary {
+  padding: 2.375rem 2.5rem 2.875rem;
+  text-align: center;
+
+  display: grid;
+  gap: 1.875rem;
+
+  &-h2 {
+    font-size: var(--font-size-m);
+    font-weight: 700;
+    color: var(--dark-navy);
+    justify-self: start;
+  }
+
+  &-ul {
+  }
+
+  &-li {
+    width: 100%;
+    display: flex;
+    align-content: space-between;
+  }
+}
