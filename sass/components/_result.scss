@@ -1,3 +1,5 @@
+@use '../utilities/breakpoints' as *;
+
 .Result {
   padding: 38px 54px 3.4375rem;
   background: linear-gradient(var(--light-slate), var(--light-royal));
@@ -8,6 +10,11 @@
   gap: 2.1875rem;
 
   border-radius: 0 1.875rem 1.875rem 0;
+
+  @include devices(tablet) {
+    border-radius: 0 0 1.875rem 1.875rem;
+  }
+
   &-h1 {
     font-size: var(--font-size-m);
     font-weight: 700;
@@ -51,5 +58,10 @@
     font-size: var(--font-size-body);
     color: var(--light-lavender);
     max-width: 25ch;
+    margin: 0 auto;
+
+    @include devices(tablet) {
+      max-width: 35ch;
+    }
   }
 }

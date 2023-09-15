@@ -1,7 +1,14 @@
+@use '../utilities/breakpoints' as *;
+
 .u-wrapper {
   width: 46rem;
   max-width: 46rem;
   margin: 0 auto;
+
+  @include devices(tablet) {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .Content {
@@ -12,6 +19,12 @@
   border-radius: 1.875rem;
 
   overflow: hidden;
+
+  @include devices(tablet) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 0;
+  }
 }
 
 .Main {
@@ -22,4 +35,8 @@
   height: 100dvh;
 
   background-color: var(--background);
+
+  @include devices(tablet) {
+    display: block;
+  }
 }

@@ -1,3 +1,5 @@
+@use '../utilities/breakpoints' as *;
+
 .Summary {
   padding: 2.375rem 2.5rem 2.875rem;
   text-align: center;
@@ -10,14 +12,86 @@
     font-weight: 700;
     color: var(--dark-navy);
     justify-self: start;
+
+    @include devices(tablet) {
+      justify-self: center;
+    }
   }
 
   &-ul {
+    display: grid;
+    gap: 1rem;
   }
 
   &-li {
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1.0625rem 1rem;
+
+    border-radius: 1.25rem;
+  }
+
+  &-li:nth-child(1) {
+    color: var(--light-red);
+    background-color: hsl(0, 100%, 67%, 0.06);
+  }
+
+  &-li:nth-child(2) {
+    color: var(--orangey-yellow);
+    background-color: hsl(39, 100%, 56%, 0.06);
+  }
+
+  &-li:nth-child(3) {
+    color: var(--green-teal);
+    background-color: hsl(166, 100%, 37%, 0.06);
+  }
+
+  &-li:nth-child(4) {
+    color: var(--cobalt-blue);
+    background-color: hsl(234, 85%, 45%, 0.06);
+  }
+
+  &-title {
     display: flex;
-    align-content: space-between;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &-p {
+    font-size: var(--font-size-body);
+  }
+
+  &-icon {
+    max-width: 1.25rem;
+  }
+
+  &-span {
+    color: var(--dark-navy);
+  }
+
+  &-score {
+    font-size: var(--font-size-body);
+    color: hsl(223, 30%, 27%, 0.6);
+    font-weight: 700;
+    justify-self: end;
+  }
+
+  &-btn {
+    font-size: var(--font-size-body);
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--dark-navy);
+    padding: 1.0625rem;
+    border-radius: 3.75rem;
+    transition: background 0.2s ease-in;
+
+    &:hover,
+    &:focus-visible {
+      background: var(--light-royal);
+    }
   }
 }
